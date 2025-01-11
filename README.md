@@ -1,3 +1,7 @@
+# Reminder Bot
+
+A service to send myself notifications so I don't forget things like my medication or flights.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
