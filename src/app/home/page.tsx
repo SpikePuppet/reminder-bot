@@ -1,3 +1,5 @@
+import { auth } from "@clerk/nextjs/server";
+
 interface Reminder {
   id: string;
   name: string;
@@ -5,7 +7,12 @@ interface Reminder {
   cadence: number; // Leep this rough for now - we'll just call it seconds while we start rendering here
 }
 
-export default function Page() {
+export default async function Page() {
+  // This checks if we're actually logged in before rendering anything
+  const { userId } = await auth.protect();
+
+  console.log(userId);
+
   const reminders: Reminder[] = [
     {
       id: "id-test-1",
