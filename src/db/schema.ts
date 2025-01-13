@@ -4,14 +4,14 @@ import { pgTable, text, uuid, varchar } from "drizzle-orm/pg-core";
 // if something wild happens. Engineer's paranoia
 export const users = pgTable("users", {
   id: uuid().primaryKey(),
-  clerkId: text().primaryKey().unique(),
+  clerkId: text().unique(),
   name: varchar({ length: 255 }).notNull(),
   email: varchar({ length: 255 }).notNull().unique(),
 });
 
 export const reminderTable = pgTable("reminders", {
   id: uuid().primaryKey(),
-  userId: text().references(() => users.id),
+  userId: uuid().references(() => users.id),
   name: varchar({ length: 500 }),
   description: text(),
   message: text(),

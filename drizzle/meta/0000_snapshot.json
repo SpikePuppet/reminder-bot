@@ -1,5 +1,5 @@
 {
-  "id": "337ae656-2016-4d63-8e3c-7c9b797733c4",
+  "id": "3fd5e0de-403a-4e60-88eb-bf85f8a527de",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -16,7 +16,7 @@
         },
         "userId": {
           "name": "userId",
-          "type": "text",
+          "type": "uuid",
           "primaryKey": false,
           "notNull": false
         },
@@ -74,8 +74,8 @@
         "clerkId": {
           "name": "clerkId",
           "type": "text",
-          "primaryKey": true,
-          "notNull": true
+          "primaryKey": false,
+          "notNull": false
         },
         "name": {
           "name": "name",

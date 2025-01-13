@@ -1,6 +1,6 @@
 CREATE TABLE "reminders" (
 	"id" uuid PRIMARY KEY NOT NULL,
-	"userId" text,
+	"userId" uuid,
 	"name" varchar(500),
 	"description" text,
 	"message" text
@@ -8,7 +8,7 @@ CREATE TABLE "reminders" (
 --> statement-breakpoint
 CREATE TABLE "users" (
 	"id" uuid PRIMARY KEY NOT NULL,
-	"clerkId" text PRIMARY KEY NOT NULL,
+	"clerkId" text,
 	"name" varchar(255) NOT NULL,
 	"email" varchar(255) NOT NULL,
 	CONSTRAINT "users_clerkId_unique" UNIQUE("clerkId"),
