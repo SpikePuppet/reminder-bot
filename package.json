@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.9",
+    "@next/env": "^15.1.4",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.3",
     "next": "15.1.4",
